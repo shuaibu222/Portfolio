@@ -1,0 +1,82 @@
+@use "../utils/" as u;
+
+.main {
+  margin-top: 5rem;
+
+  > .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 10rem;
+
+    > .hero-desc {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.9rem;
+
+      @include u.breakpoint-down(small) {
+        text-align: center;
+      }
+
+      @include u.breakpoint-up(large) {
+        font-size: 1rem;
+      }
+
+      > .shuayb {
+        font-size: 2.5rem;
+        font-weight: 500;
+        color: white;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+
+        @include u.breakpoint-up(medium) {
+          font-size: 3rem;
+        }
+
+        @include u.breakpoint-up(large) {
+          font-size: 4rem;
+        }
+      }
+
+      > h5 {
+        font-size: 0.8rem;
+        font-weight: 300;
+        font-style: italic;
+        letter-spacing: 1px;
+        line-height: 1.5rem;
+        text-align: center;
+
+        @include u.breakpoint-down(small) {
+          width: 60%;
+        }
+
+        @include u.breakpoint-up(medium) {
+          width: 50%;
+        }
+
+        @include u.breakpoint-up(large) {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    > a {
+      font-weight: 400;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
+      border: 2px solid white;
+      transition: all 250ms ease-in-out;
+
+      &:hover {
+        background: white;
+        color: black;
+      }
+    }
+  }
+}

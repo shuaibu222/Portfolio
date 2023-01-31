@@ -1,0 +1,83 @@
+@use "../utils/" as u;
+
+html {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+  font-size: 100%;
+  overflow-x: hidden;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background: radial-gradient(
+    ellipse at bottom,
+    #202f3f 0%,
+    #16222e 60%,
+    #090a0f 100%
+  );
+  min-height: 100vh;
+  color: u.$text-color;
+  max-width: 90vw;
+  margin-inline: auto;
+  position: relative;
+  overflow-x: hidden;
+
+  // animation scss
+
+  // end animation
+
+  @include u.breakpoint-up(medium) {
+    max-width: 80vw;
+  }
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+p,
+li,
+a {
+  letter-spacing: 1.1px;
+  line-height: 1.5rem;
+  font-weight: 200;
+}
+
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: u.$text-color;
+}
+
+.zero {
+  width: 0;
+}
+.visible {
+  overflow-y: visible;
+}

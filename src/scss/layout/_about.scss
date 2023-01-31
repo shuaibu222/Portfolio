@@ -1,0 +1,96 @@
+@use "../utils/" as u;
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding-top: 3rem;
+  margin-bottom: 10rem;
+
+  > .heading {
+    > h2 {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 100;
+      color: white;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid u.$text-color;
+
+      &::first-letter {
+        font-size: 2.5rem;
+        font-weight: 700;
+      }
+    }
+  }
+
+  > .content {
+    display: grid;
+    gap: 2rem;
+    margin-top: 5rem;
+
+    @include u.breakpoint-up(large) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include u.breakpoint-down(small) {
+      gap: 4rem;
+      text-align: center;
+    }
+
+    > .image-about {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      max-width: 70%;
+      margin-inline: auto;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: -4px;
+        left: -4px;
+        right: -4px;
+        bottom: -4px;
+        background: linear-gradient(235deg, #89ff00, #010695, red);
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: -4px;
+        left: -4px;
+        right: -4px;
+        bottom: -4px;
+        background: linear-gradient(235deg, #89ff00, #010695, red);
+        transform: skewX(2deg) skewY(4deg);
+        filter: blur(1rem);
+      }
+
+      @include u.breakpoint-up(large) {
+        margin-left: 4rem;
+        width: 70%;
+      }
+
+      > img {
+        z-index: 1;
+      }
+    }
+
+    > p {
+      font-style: italic;
+      font-size: 0.9rem;
+
+      @include u.breakpoint-down(medium) {
+        order: -1;
+      }
+
+      &::first-letter {
+        font-family: cursive;
+        margin-right: 0.3rem;
+        font-size: 3rem;
+        font-weight: 200;
+      }
+    }
+  }
+}

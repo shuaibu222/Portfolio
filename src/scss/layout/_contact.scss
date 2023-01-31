@@ -1,0 +1,95 @@
+@use "../utils/" as u;
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+  min-height: 80vh;
+  padding-top: 2rem;
+  margin-bottom: 5rem;
+
+  > h2 {
+    align-self: center;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 100;
+    color: white;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid u.$text-color;
+
+    &::first-letter {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    // @include u.breakpoint-down(small) {
+    //   width: 60%;
+    // }
+  }
+
+  > .contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+
+    > h5 {
+      color: white;
+      font-size: 3rem;
+      font-weight: 500;
+
+      @include u.breakpoint-up(medium) {
+        font-size: 4rem;
+      }
+    }
+
+    > p {
+      text-align: center;
+      font-style: italic;
+      word-wrap: break-word;
+
+      @include u.breakpoint-up(medium) {
+        max-width: 50vw;
+        margin-inline: auto;
+      }
+    }
+
+    > a {
+      font-weight: 400;
+      text-align: center;
+      margin-top: 2rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
+      border: 2px solid white;
+      transition: all 250ms ease-in-out;
+
+      &:hover {
+        background: white;
+        color: black;
+      }
+    }
+
+    > .social-icons {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+
+      > a {
+        text-decoration: underline;
+        transition: all 200ms ease-in-out;
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+}
