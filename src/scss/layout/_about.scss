@@ -63,7 +63,7 @@
         bottom: -4px;
         background: linear-gradient(235deg, #89ff00, #010695, red);
         transform: skewX(2deg) skewY(4deg);
-        filter: blur(1rem);
+        filter: blur(0.5rem);
       }
 
       @include u.breakpoint-up(large) {
