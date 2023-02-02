@@ -20,8 +20,3 @@ sidebar.addEventListener("click", function (link) {
     body.style.overflowY = "hidden";
   }
 });
-
-closeSidebar.addEventListener("click", function () {
-  sidebar.style.width = "0px";
-  body.style.overflowY = "visible";
-});

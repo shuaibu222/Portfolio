@@ -45,10 +45,6 @@ body {
   position: relative;
   overflow-x: hidden;
 
-  // animation scss
-
-  // end animation
-
   @include u.breakpoint-up(medium) {
     max-width: 80vw;
   }
@@ -73,11 +69,4 @@ li {
 a {
   text-decoration: none;
   color: u.$text-color;
-}
-
-.zero {
-  width: 0;
-}
-.visible {
-  overflow-y: visible;
 }
