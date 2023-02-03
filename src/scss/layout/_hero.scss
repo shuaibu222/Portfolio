@@ -29,7 +29,8 @@
       > .shuayb {
         font-size: 2.5rem;
         font-weight: 500;
-        color: white;
+        text-align: center;
+        color: whitesmoke;
         margin-top: 1.5rem;
         margin-bottom: 1.5rem;
 
@@ -51,7 +52,7 @@
         text-align: center;
 
         @include u.breakpoint-down(small) {
-          width: 60%;
+          width: 75%;
         }
 
         @include u.breakpoint-up(medium) {
