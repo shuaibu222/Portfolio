@@ -54,52 +54,7 @@
         padding-bottom: 0.5rem;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
-        border: 2px solid white;
-
-        &.html {
-          color: rgb(255, 85, 0);
-          border: 2px solid rgb(255, 85, 0);
-        }
-        &.css {
-          color: rgb(0, 123, 255);
-          border: 2px solid rgb(0, 123, 255);
-        }
-        &.sass {
-          color: rgb(239, 123, 140);
-          border: 2px solid rgb(239, 123, 140);
-        }
-        &.javascript {
-          color: yellow;
-          border: 2px solid yellow;
-        }
-        &.git {
-          color: orangered;
-          border: 2px solid orangered;
-        }
-        &.github {
-          color: white;
-          border: 2px solid white;
-        }
-        &.figma {
-          color: rgb(137, 221, 10);
-          border: 2px solid rgb(137, 221, 10);
-        }
-        &.jquery {
-          color: skyblue;
-          border: 2px solid skyblue;
-        }
-        &.npm {
-          color: gold;
-          border: 2px solid gold;
-        }
-        &.wordpress {
-          color: white;
-          border: 2px solid white;
-        }
-        &.rwd {
-          color: rgb(100, 94, 227);
-          border: 2px solid rgb(100, 94, 227);
-        }
+        border: 2px solid u.$text-color;
 
         > img {
           width: 3rem;

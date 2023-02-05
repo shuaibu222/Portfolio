@@ -43,28 +43,7 @@
       position: relative;
       max-width: 70%;
       margin-inline: auto;
-
-      &::before {
-        position: absolute;
-        content: "";
-        top: -4px;
-        left: -4px;
-        right: -4px;
-        bottom: -4px;
-        background: linear-gradient(235deg, #89ff00, #010695, red);
-      }
-
-      &::after {
-        position: absolute;
-        content: "";
-        top: -4px;
-        left: -4px;
-        right: -4px;
-        bottom: -4px;
-        background: linear-gradient(235deg, #89ff00, #010695, red);
-        transform: skewX(2deg) skewY(4deg);
-        filter: blur(0.5rem);
-      }
+      box-shadow: 20px 20px 0px rgb(255, 255, 255);
 
       @include u.breakpoint-up(large) {
         margin-left: 4rem;
@@ -91,7 +70,7 @@
         font-weight: 200;
       }
 
-      > .freecodecamp {
+      > .a {
         text-decoration: underline;
       }
     }
