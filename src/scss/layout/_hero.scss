@@ -8,9 +8,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
-    padding-top: 3rem;
+    gap: 1rem;
+    padding-top: 0.5rem;
     padding-bottom: 10rem;
+
+    @include u.breakpoint-up(medium) {
+      padding-top: 3rem;
+    }
 
     > .hero-desc {
       display: flex;
