@@ -40,33 +40,6 @@
       box-shadow: 10px 20px 10px rgba(12, 14, 25, 0.374);
       transition: all 200ms ease-in-out;
 
-      &::before {
-        content: "";
-        position: absolute;
-        top: -2px;
-        left: -2px;
-        bottom: -2px;
-        right: -2px;
-        background: whitesmoke;
-        opacity: 0;
-        z-index: -1;
-        transition: all 200ms ease-in-out;
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        top: -2px;
-        left: -2px;
-        bottom: -2px;
-        right: -2px;
-        background: whitesmoke;
-        opacity: 0;
-        z-index: -2;
-        filter: blur(10px);
-        transition: all 200ms ease-in-out;
-      }
-
       > .glass {
         position: absolute;
         top: 0;
@@ -130,10 +103,6 @@
       }
 
       &:hover {
-        &::before,
-        &::after {
-          opacity: 1;
-        }
         > .cards:hover {
           > .technologies {
             > .html {
